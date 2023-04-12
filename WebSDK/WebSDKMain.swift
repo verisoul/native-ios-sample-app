@@ -9,7 +9,7 @@ import WebKit
 import Foundation
 
 public final class WebSDKMain: NSObject {
-    private let nativeToWebHandler = "success"
+    private let nativeToWebHandler = "error"
     
     private let wkWebview: WKWebView = {
         let webview = WKWebView()
@@ -67,9 +67,10 @@ public final class WebSDKMain: NSObject {
 extension WebSDKMain: WKScriptMessageHandler {
     public func userContentController(_ userContentController: WKUserContentController,
                                       didReceive message: WKScriptMessage) {
+        print(message.body)
         guard
             let body = message.body as? [String: String],
-            let trackingId = body["trackingId"],
+            let trackingId = body["tracking_id"],
             message.name == nativeToWebHandler else {
             return
         }
