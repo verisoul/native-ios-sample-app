@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webSdk.loadUrl(url: URL(string: "https://webview.dev.verisoul.xyz/?projectId=1234")!)
+        webSdk.loadUrl(url: URL(string: "https://webview.sandbox.verisoul.xyz/?projectId=1234")!, from: self)
     }
 }
 

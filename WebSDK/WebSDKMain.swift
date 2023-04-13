@@ -28,8 +28,11 @@ public final class WebSDKMain: NSObject {
         wkWebview.configuration.userContentController.add(self, name: nativeToWebHandler)
     }
     
-    public func loadUrl(url: URL) {
+    public func loadUrl(url: URL, from viewController: UIViewController) {
         DispatchQueue.main.async {
+            viewController.view.addSubview(self.wkWebview)
+            self.wkWebview.frame = .zero
+            
             self.wkWebview.load(URLRequest(url: url))
         }
     }
