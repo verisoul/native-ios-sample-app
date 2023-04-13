@@ -36,29 +36,30 @@ public final class WebSDKMain: NSObject {
     
     private func getAccountId(with trackingId: String, completion: ((String?) -> Void)?) {
         let body = [
-            "trackingId": trackingId,
-            "accountId": "randomString"
+            "tracking_id": trackingId,
+            "account_id": "10064213.0"
         ]
         
         guard
-            let url = URL(string: "https://api.prod.verisoul.xyz/predict"),
+            let url = URL(string: "https://api.sandbox.verisoul.xyz/predict"),
             let bodyData = try? JSONSerialization.data(withJSONObject: body) else {
             completion?(nil)
             return
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.addValue("8Ldtkg35pX5YoHu2N3qq89faV6fKvakh1zk7Ps5c", forHTTPHeaderField: "x-api-key")
+        request.addValue("4sfJEv1GRidReROYabB7149W3GFxnRk7Eb7suXGc", forHTTPHeaderField: "x-api-key")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = bodyData
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data,
-                  let json = try? JSONSerialization.jsonObject(with: data) as? [String: String] else {
+                  let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
                 completion?(nil)
                 return
             }
-            completion?(json["accountId"])
+            let accountId = json["account_id"] as? String
+            completion?(accountId)
         }.resume()
     }
 
