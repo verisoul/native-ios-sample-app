@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "917BF07329DE848700AB83F5"
-               BuildableName = "WebSDK.framework"
-               BlueprintName = "WebSDK"
-               ReferencedContainer = "container:WebSDK.xcodeproj">
+               BuildableName = "ZeroFakeDemo.framework"
+               BlueprintName = "ZeroFakeDemo"
+               ReferencedContainer = "container:ZeroFakeDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "917BF07329DE848700AB83F5"
-            BuildableName = "WebSDK.framework"
-            BlueprintName = "WebSDK"
-            ReferencedContainer = "container:WebSDK.xcodeproj">
+            BuildableName = "ZeroFakeDemo.framework"
+            BlueprintName = "ZeroFakeDemo"
+            ReferencedContainer = "container:ZeroFakeDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

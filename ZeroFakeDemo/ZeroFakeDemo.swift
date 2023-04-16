@@ -8,8 +8,9 @@
 import WebKit
 import Foundation
 
-public final class WebSDKMain: NSObject {
+public final class ZeroFakeDemo: NSObject {
     private let nativeToWebHandler = "error"
+    private let apiKey = "yourVerisoulApiKey"
     
     private let wkWebview: WKWebView = {
         let webview = WKWebView()
@@ -37,10 +38,12 @@ public final class WebSDKMain: NSObject {
         }
     }
     
+    // Make this API call from a secure backend server NOT the client app
+    // Note: this is included in the sample app for demo purposes
     private func getAccountId(with trackingId: String, completion: ((String?) -> Void)?) {
         let body = [
             "tracking_id": trackingId,
-            "account_id": "10064213.0"
+            "account_id": "internal-customer-identifier"
         ]
         
         guard
@@ -51,7 +54,7 @@ public final class WebSDKMain: NSObject {
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.addValue("4sfJEv1GRidReROYabB7149W3GFxnRk7Eb7suXGc", forHTTPHeaderField: "x-api-key")
+        request.addValue(apiKey, forHTTPHeaderField: "x-api-key")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = bodyData
         
@@ -68,7 +71,7 @@ public final class WebSDKMain: NSObject {
 
 }
 
-extension WebSDKMain: WKScriptMessageHandler {
+extension ZeroFakeDemo: WKScriptMessageHandler {
     public func userContentController(_ userContentController: WKUserContentController,
                                       didReceive message: WKScriptMessage) {
         print(message.body)
@@ -80,7 +83,7 @@ extension WebSDKMain: WKScriptMessageHandler {
         }
         
         getAccountId(with: trackingId) { accountId in
-            print(accountId)
+            print(accountId as Any)
         }
     }
 }
