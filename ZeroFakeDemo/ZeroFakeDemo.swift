@@ -8,6 +8,8 @@
 import WebKit
 import Foundation
 
+typealias JSON = [String: Any]
+
 public final class ZeroFakeDemo: NSObject {
     private let nativeToWebHandler = "error"
     private let apiKey = "yourVerisoulApiKey"
@@ -40,7 +42,7 @@ public final class ZeroFakeDemo: NSObject {
     
     // Make this API call from a secure backend server NOT the client app
     // Note: this is included in the sample app for demo purposes
-    private func getAccountId(with trackingId: String, completion: ((String?) -> Void)?) {
+    private func getAccountId(with trackingId: String, completion: ((JSON?) -> Void)?) {
         let body = [
             "tracking_id": trackingId,
             "account_id": "internal-customer-identifier"
@@ -64,8 +66,7 @@ public final class ZeroFakeDemo: NSObject {
                 completion?(nil)
                 return
             }
-            let accountId = json["account_id"] as? String
-            completion?(accountId)
+            completion?(json)
         }.resume()
     }
 
@@ -82,8 +83,8 @@ extension ZeroFakeDemo: WKScriptMessageHandler {
             return
         }
         
-        getAccountId(with: trackingId) { accountId in
-            print(accountId as Any)
+        getAccountId(with: trackingId) { response in
+            print(response as Any)
         }
     }
 }
