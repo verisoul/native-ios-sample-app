@@ -11,7 +11,7 @@ import Foundation
 typealias JSON = [String: Any]
 
 public final class ZeroFakeDemo: NSObject {
-    private let nativeToWebHandler = "error"
+    private let nativeToWebHandler = "verisoulMessageHandler"
     private let apiKey = "yourVerisoulApiKey"
     
     private let wkWebview: WKWebView = {
