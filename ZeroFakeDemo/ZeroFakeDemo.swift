@@ -42,14 +42,14 @@ public final class ZeroFakeDemo: NSObject {
     
     // Make this API call from a secure backend server NOT the client app
     // Note: this is included in the sample app for demo purposes
-    private func getAccountId(with trackingId: String, completion: ((JSON?) -> Void)?) {
+    private func predict(with trackingId: String, completion: ((JSON?) -> Void)?) {
         let body = [
             "tracking_id": trackingId,
-            "account_id": "internal-customer-identifier"
+            "auth_id": "internal-customer-identifier"
         ]
         
         guard
-            let url = URL(string: "https://api.sandbox.verisoul.xyz/predict"),
+            let url = URL(string: "https://api.sandbox.verisoul.xyz/zerofake/predict"),
             let bodyData = try? JSONSerialization.data(withJSONObject: body) else {
             completion?(nil)
             return
@@ -75,15 +75,19 @@ public final class ZeroFakeDemo: NSObject {
 extension ZeroFakeDemo: WKScriptMessageHandler {
     public func userContentController(_ userContentController: WKUserContentController,
                                       didReceive message: WKScriptMessage) {
+        print("Webview Response: ")
         print(message.body)
+        
         guard
             let body = message.body as? [String: String],
-            let trackingId = body["tracking_id"],
-            message.name == nativeToWebHandler else {
+            message.name.lowercased() == nativeToWebHandler.lowercased(),
+            let trackingId = body["tracking_id"]
+        else {
             return
         }
         
-        getAccountId(with: trackingId) { response in
+        predict(with: trackingId) { response in
+            print("ZeroFake API Response: ")
             print(response as Any)
         }
     }
