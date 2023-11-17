@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "917BF07329DE848700AB83F5"
-               BuildableName = "ZeroFakeDemo.framework"
-               BlueprintName = "ZeroFakeDemo"
-               ReferencedContainer = "container:ZeroFakeDemo.xcodeproj">
+               BuildableName = "SampleApp.framework"
+               BlueprintName = "SampleApp"
+               ReferencedContainer = "container:SampleApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "917BF07329DE848700AB83F5"
-            BuildableName = "ZeroFakeDemo.framework"
-            BlueprintName = "ZeroFakeDemo"
-            ReferencedContainer = "container:ZeroFakeDemo.xcodeproj">
+            BuildableName = "SampleApp.framework"
+            BlueprintName = "SampleApp"
+            ReferencedContainer = "container:SampleApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
