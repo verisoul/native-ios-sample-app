@@ -13,10 +13,10 @@
 		9136A96529DEA12500CEAF06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9136A96329DEA12500CEAF06 /* Main.storyboard */; };
 		9136A96729DEA12600CEAF06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9136A96629DEA12600CEAF06 /* Assets.xcassets */; };
 		9136A96A29DEA12600CEAF06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9136A96829DEA12600CEAF06 /* LaunchScreen.storyboard */; };
-		9136A97029DEA17400CEAF06 /* SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 917BF07429DE848700AB83F5 /* SampleApp.framework */; };
-		9136A97129DEA17400CEAF06 /* SampleApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 917BF07429DE848700AB83F5 /* SampleApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		917BF07829DE848700AB83F5 /* Demo.h in Headers */ = {isa = PBXBuildFile; fileRef = 917BF07729DE848700AB83F5 /* Demo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		917BF07F29DE854900AB83F5 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917BF07E29DE854900AB83F5 /* Demo.swift */; };
+		9136A97029DEA17400CEAF06 /* ZeroFakeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 917BF07429DE848700AB83F5 /* ZeroFakeDemo.framework */; };
+		9136A97129DEA17400CEAF06 /* ZeroFakeDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 917BF07429DE848700AB83F5 /* ZeroFakeDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		917BF07829DE848700AB83F5 /* ZeroFakeDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = 917BF07729DE848700AB83F5 /* ZeroFakeDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		917BF07F29DE854900AB83F5 /* ZeroFakeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917BF07E29DE854900AB83F5 /* ZeroFakeDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9136A97129DEA17400CEAF06 /* SampleApp.framework in Embed Frameworks */,
+				9136A97129DEA17400CEAF06 /* ZeroFakeDemo.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,9 +52,9 @@
 		9136A96629DEA12600CEAF06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9136A96929DEA12600CEAF06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9136A96B29DEA12600CEAF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		917BF07429DE848700AB83F5 /* SampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		917BF07729DE848700AB83F5 /* Demo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo.h; sourceTree = "<group>"; };
-		917BF07E29DE854900AB83F5 /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		917BF07429DE848700AB83F5 /* ZeroFakeDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZeroFakeDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		917BF07729DE848700AB83F5 /* ZeroFakeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroFakeDemo.h; sourceTree = "<group>"; };
+		917BF07E29DE854900AB83F5 /* ZeroFakeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroFakeDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9136A97029DEA17400CEAF06 /* SampleApp.framework in Frameworks */,
+				9136A97029DEA17400CEAF06 /* ZeroFakeDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +110,7 @@
 		917BF07529DE848700AB83F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				917BF07429DE848700AB83F5 /* SampleApp.framework */,
+				917BF07429DE848700AB83F5 /* ZeroFakeDemo.framework */,
 				9136A95B29DEA12500CEAF06 /* Sample.app */,
 			);
 			name = Products;
@@ -119,8 +119,8 @@
 		917BF07629DE848700AB83F5 /* ZeroFakeDemo */ = {
 			isa = PBXGroup;
 			children = (
-				917BF07729DE848700AB83F5 /* Demo.h */,
-				917BF07E29DE854900AB83F5 /* Demo.swift */,
+				917BF07729DE848700AB83F5 /* ZeroFakeDemo.h */,
+				917BF07E29DE854900AB83F5 /* ZeroFakeDemo.swift */,
 			);
 			path = ZeroFakeDemo;
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				917BF07829DE848700AB83F5 /* Demo.h in Headers */,
+				917BF07829DE848700AB83F5 /* ZeroFakeDemo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +158,9 @@
 			productReference = 9136A95B29DEA12500CEAF06 /* Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		917BF07329DE848700AB83F5 /* SampleApp */ = {
+		917BF07329DE848700AB83F5 /* ZeroFakeDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 917BF07B29DE848700AB83F5 /* Build configuration list for PBXNativeTarget "SampleApp" */;
+			buildConfigurationList = 917BF07B29DE848700AB83F5 /* Build configuration list for PBXNativeTarget "ZeroFakeDemo" */;
 			buildPhases = (
 				917BF06F29DE848700AB83F5 /* Headers */,
 				917BF07029DE848700AB83F5 /* Sources */,
@@ -171,9 +171,9 @@
 			);
 			dependencies = (
 			);
-			name = SampleApp;
+			name = ZeroFakeDemo;
 			productName = WebSDK;
-			productReference = 917BF07429DE848700AB83F5 /* SampleApp.framework */;
+			productReference = 917BF07429DE848700AB83F5 /* ZeroFakeDemo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -195,7 +195,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 917BF06E29DE848700AB83F5 /* Build configuration list for PBXProject "SampleApp" */;
+			buildConfigurationList = 917BF06E29DE848700AB83F5 /* Build configuration list for PBXProject "ZeroFakeDemo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -208,7 +208,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				917BF07329DE848700AB83F5 /* SampleApp */,
+				917BF07329DE848700AB83F5 /* ZeroFakeDemo */,
 				9136A95A29DEA12500CEAF06 /* Sample */,
 			);
 		};
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				917BF07F29DE854900AB83F5 /* Demo.swift in Sources */,
+				917BF07F29DE854900AB83F5 /* ZeroFakeDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +258,7 @@
 /* Begin PBXTargetDependency section */
 		9136A97329DEA17400CEAF06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 917BF07329DE848700AB83F5 /* SampleApp */;
+			target = 917BF07329DE848700AB83F5 /* ZeroFakeDemo */;
 			targetProxy = 9136A97229DEA17400CEAF06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -537,7 +537,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		917BF06E29DE848700AB83F5 /* Build configuration list for PBXProject "SampleApp" */ = {
+		917BF06E29DE848700AB83F5 /* Build configuration list for PBXProject "ZeroFakeDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				917BF07929DE848700AB83F5 /* Debug */,
@@ -546,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		917BF07B29DE848700AB83F5 /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
+		917BF07B29DE848700AB83F5 /* Build configuration list for PBXNativeTarget "ZeroFakeDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				917BF07C29DE848700AB83F5 /* Debug */,
