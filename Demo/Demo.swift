@@ -77,6 +77,8 @@ public final class Demo: NSObject {
 extension Demo: WKScriptMessageHandler {
     public func userContentController(_ userContentController: WKUserContentController,
                                       didReceive message: WKScriptMessage) {
+        print("got a message")
+        print(message.body)
         guard
             let body = message.body as? [String: String],
             message.name.lowercased() == nativeToWebHandler.lowercased(),
